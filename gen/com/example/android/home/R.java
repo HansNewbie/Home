@@ -123,7 +123,6 @@ containing a value of this type.
         public static final int menu_wallpaper=0x7f060002;
         public static final int show_all_apps=0x7f060001;
         /**  Wallpaper 
- Wallpaper 
          */
         public static final int wallpaper_instructions=0x7f060005;
     }
