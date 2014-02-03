@@ -9,14 +9,28 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <style>
-    .date_entry {
+    body {
+      text-align: justify;
+    }
+
+    ul, ol {
+      list-style-position: outside;
+    }
+
+    .date-entry {
       text-decoration: underline;
     }
-    img {
+
+    .apk-download {
+      text-align: center;
+    }
+
+    .img-holder {
+      text-align: center;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 20px;
     }
+
     </style>
 
     <title>Android Launcher / Home</title>
@@ -43,17 +57,47 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <hr>
-        <p>This repository is a modified version of sample Android Launcher, a.k.a. Home, from Android SDK. This page contains the APK of the versions. APK is made for Galaxy SIII. For the code changes, see commit in GitHub repo - commit message will explain some stuff.</p>
+        <p class="repo-explanation">This repository is a modified version of sample Android Launcher, a.k.a. Home, from Android SDK. This page contains the APK of the versions. APK is made for and tested on Galaxy SIII. For the code changes, see commit in GitHub repo - commit message will explain some stuff.</p>
         <hr>
-        <h4 class="date_entry">26 January 2014</h4>
-        <a href="files/2014-01-26/Home.apk">Download APK here</a>
-        <img src="images/2014-09-26.png" width=200px></img>
-        <p>Change icon size to be the commented function call. Seen effect is icon is displayed larger - you could see some of the letters being cut off because of the bigger icon. I believe that's because now the application calls for bigger icon to be used, but rendered wrongly so that it is enlarged thus hte low resolution look.</p>
+
+        <h4 class="date-entry">3 February 2014</h4>
+        <div class="apk-download"><a href="files/2014-02-03/Home.apk">Download APK here</a></div>
+        <div class="img-holder"><img src="images/2014-02-03.png" width="200px"></div>
+        <p>
+          <strong>Changes:</strong>
+          <ul>
+            <li>Icon size used from resources is changed to commented function call.</li>
+            <li>Added SDK specification to manifest file</li>
+          </ul>
+          <strong>Effects:</strong>
+          <ul>
+            <li>Icon resolution no longer broken - I tried not adding SDK specification and playing with icon size and icon resource interchangebly, but the resolution is still broken. You need these changes and changes from 26 January 2014 on icon size to make the icon resolution to be sharp. Using icon size of 42 (i.e. reverting changes from 26 January 2014) will make icons in recent app stack at the bottom of the home screen to be very small.</li>
+            <li>Application titles are still cut off - I believe this needs rework on margin of icon.</li>
+          </ul>
+        </p>
         <hr>
-        <h4 class="date_entry">09 January 2014</h4>
-        <a href="files/2014-01-09/Home.apk">Download APK here</a>
-        <img src="images/2014-09-01.png" width=200px></img>
-        <p>Compiled initial sample project files with all localization values removed. The resolution is too low for the phone.</p>
+
+        <h4 class="date-entry">26 January 2014</h4>
+        <div class="apk-download"><a href="files/2014-01-26/Home.apk">Download APK here</a></div>
+        <div class="img-holder"><img src="images/2014-01-26.png" width="200px"></div>
+        <p>
+          <strong>Changes:</strong>
+          <ul>
+            <li>Icon size is changed to be the commented function call.</li>
+          </ul>
+          <strong>Effects:</strong>
+          <ul>
+            <li>Icon is displayed larger - you could see some of the letters being cut off because of the bigger icon. I believe that's because now the application calls for bigger icon to be used, but rendered wrongly so that it is enlarged thus the low resolution look.</li>
+          </ul>
+        </p>
+        <hr>
+
+        <h4 class="date-entry">09 January 2014</h4>
+        <div class="apk-download"><a href="files/2014-01-09/Home.apk">Download APK here</a></div>
+        <div class="img-holder"><img src="images/2014-01-09.png" width="200px"></div>
+        <p>
+          Compiled initial sample project files with all localization values removed. The icon resolution is broken for the phone.
+        </p>
         <hr>
       </section>
     </div>
