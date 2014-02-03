@@ -27,6 +27,7 @@ import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -623,9 +624,9 @@ public class Home extends Activity {
             Drawable icon = info.icon;
 
             if (!info.filtered) {
-                //final Resources resources = getContext().getResources();
-                int width = 42;//(int) resources.getDimension(android.R.dimen.app_icon_size);
-                int height = 42;//(int) resources.getDimension(android.R.dimen.app_icon_size);
+                final Resources resources = getContext().getResources(); //
+                int width = (int) resources.getDimension(android.R.dimen.app_icon_size); // 42;
+                int height = (int) resources.getDimension(android.R.dimen.app_icon_size); // 42;
 
                 final int iconWidth = icon.getIntrinsicWidth();
                 final int iconHeight = icon.getIntrinsicHeight();
