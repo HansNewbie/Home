@@ -748,10 +748,30 @@ public class Home extends Activity {
         @Override
         public void setBounds(int left, int top, int right, int bottom) {
             super.setBounds(left, top, right, bottom);
-            // Ensure the wallpaper is as large as it really is, to avoid stretching it
-            // at drawing time
-            mWallpaper.setBounds(left, top, left + mWallpaper.getIntrinsicWidth(),
-                    top + mWallpaper.getIntrinsicHeight());
+            
+            int wallpaperWidth = mWallpaper.getIntrinsicWidth();
+            int wallpaperHeight = mWallpaper.getIntrinsicHeight();
+            int boundWidth = right - left;
+            int boundHeight = bottom - top;
+            int centerLeft;
+            int centerTop;
+            
+            if (wallpaperWidth > boundWidth) {
+                centerLeft = left - ((wallpaperWidth - boundWidth)/2);
+            }
+            else {
+                centerLeft = left;
+            }
+            
+            if (wallpaperHeight > boundHeight) {
+                centerTop = top - ((wallpaperHeight - boundHeight)/2);
+            }
+            else {
+                centerTop = top;
+            }
+            
+            mWallpaper.setBounds(centerLeft, centerTop, centerLeft + wallpaperWidth,
+                    centerTop + wallpaperHeight);
         }
 
         public void draw(Canvas canvas) {
