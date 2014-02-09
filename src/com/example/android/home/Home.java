@@ -16,6 +16,7 @@
 
 package com.example.android.home;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.SearchManager;
@@ -56,7 +57,6 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.GridView;
 import android.widget.TextView;
-
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.File;
@@ -65,10 +65,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+@SuppressLint("NewApi") // To remove error about pressing home and back
 public class Home extends Activity {
     /**
      * Tag used for logging errors.
