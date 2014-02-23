@@ -459,7 +459,7 @@ public class Home extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MENU_WALLPAPER_SETTINGS:
-                startWallpaper();
+                changeWallpaper();
                 return true;
             case MENU_SEARCH:
                 onSearchRequested();
@@ -469,7 +469,7 @@ public class Home extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void startWallpaper() {
+    private void changeWallpaper() {
         final Intent pickWallpaper = new Intent(Intent.ACTION_SET_WALLPAPER);
         startActivity(Intent.createChooser(pickWallpaper, getString(R.string.menu_wallpaper)));
     }
