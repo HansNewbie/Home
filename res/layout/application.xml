@@ -19,7 +19,7 @@
     android:layout_width="78dip"
     android:layout_height="65dip"
     android:paddingTop="4dip"
-    android:textSize="12dip"
+    android:textSize="12sp"
     android:singleLine="true"
     android:ellipsize="end"
     android:textColor="@color/bright_text_dark_focused"
