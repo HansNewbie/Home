@@ -11,6 +11,8 @@
     <style>
     body {
       text-align: justify;
+      font-family: Verdana, sans-serif;
+      line-height: 30px;
     }
 
     ul, ol {
@@ -23,12 +25,28 @@
 
     .apk-download {
       text-align: center;
+      padding: 10px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      border: 1px solid #007EDF;
+    }
+
+    .apk-download:hover {
+      -webkit-box-shadow: 0px 0px 10px #AAA;
+      -moz-box-shadow: 0px 0px 10px #AAA;
+      box-shadow: 0px 0px 10px #AAA;
     }
 
     .img-holder {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .notes {
+      font-size: 15px;
     }
 
     </style>
@@ -57,11 +75,32 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <hr>
-        <p class="repo-explanation">This repository is a modified version of sample Android Launcher, a.k.a. Home, from Android SDK. This page contains the APK of the versions. APK is made for and tested on Galaxy SIII. For the code changes, see commit in GitHub repo - commit message will explain some stuff.</p>
+        <p>This repository is a modified version of sample Android Launcher, a.k.a. Home, from Android SDK. This page contains the APK of the versions. APK is made for and tested on Galaxy SIII. Occasionally, I may test APK on Galaxy Note 8.0 Wi-Fi. For the code changes, see commit in GitHub repo - commit message will explain some stuff.</p>
+        <p class="notes">*The dates listed below will be the date of testing of APK - e.g. code is committed on 5 February but built and ran on device only on 15 February; the date listed will be 15 February instead of 5 February.</p>
+        <hr>
+
+        <h4 class="date-entry">27 February 2014</h4>
+        <a href="files/2014-02-27/Home.apk"><div class="apk-download">Download APK here</div></a>
+        <div class="img-holder"><img src="images/2014-02-27.png" width="200px"></div>
+        <div class="img-holder"><img src="images/2014-02-27-tablet-8.png" width="400px"></div>
+        <p>
+          <strong>Changes:</strong>
+          <ul>
+            <li>Changed text size from using dip to sp.</li>
+            <li>Some refactoring of names.</li>
+            <li>Added lint suppressor.</li>
+          </ul>
+          <strong>Effects:</strong>
+          <ul>
+            <li>Change of text size from dip to sp should make the font to have correct size on different screen sizes - the reason I tried installing in my Galaxy Note. There was no visible difference, though, on both Galaxy SIII and Galaxy Note 8.0.</li>
+            <li>Renaming of method should not have any impact.</li>
+            <li>No warning for button press adapter in Eclipse; ultimately the suppressor should be removed on later updates.</li>
+          </ul>
+        </p>
         <hr>
 
         <h4 class="date-entry">3 February 2014 #2</h4>
-        <div class="apk-download"><a href="files/2014-02-03-2/Home.apk">Download APK here</a></div>
+        <a href="files/2014-02-03-2/Home.apk"><div class="apk-download">Download APK here</div></a>
         <div class="img-holder"><img src="images/2014-02-03-2.png" width="200px"></div>
         <p>
           <strong>Changes:</strong>
@@ -76,7 +115,7 @@
         <hr>
 
         <h4 class="date-entry">3 February 2014 #1</h4>
-        <div class="apk-download"><a href="files/2014-02-03-1/Home.apk">Download APK here</a></div>
+        <a href="files/2014-02-03-1/Home.apk"><div class="apk-download">Download APK here</div></a>
         <div class="img-holder"><img src="images/2014-02-03-1.png" width="200px"></div>
         <p>
           <strong>Changes:</strong>
@@ -93,7 +132,7 @@
         <hr>
 
         <h4 class="date-entry">26 January 2014</h4>
-        <div class="apk-download"><a href="files/2014-01-26/Home.apk">Download APK here</a></div>
+        <a href="files/2014-01-26/Home.apk"><div class="apk-download">Download APK here</div></a>
         <div class="img-holder"><img src="images/2014-01-26.png" width="200px"></div>
         <p>
           <strong>Changes:</strong>
@@ -108,7 +147,7 @@
         <hr>
 
         <h4 class="date-entry">09 January 2014</h4>
-        <div class="apk-download"><a href="files/2014-01-09/Home.apk">Download APK here</a></div>
+        <a href="files/2014-01-09/Home.apk"><div class="apk-download">Download APK here</div></a>
         <div class="img-holder"><img src="images/2014-01-09.png" width="200px"></div>
         <p>
           Compiled initial sample project files with all localization values removed. The icon resolution is broken for the phone.
