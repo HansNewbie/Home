@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+/*
+ * This file has been modified from original licensed file
+ */ 
+-->
+<!--
 /* //device/apps/Home/AndroidManifest.xml
 **
 ** Copyright 2006, The Android Open Source Project
