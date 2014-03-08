@@ -34,7 +34,7 @@
         android:drawSelectorOnTop="false"
         android:listSelector="@drawable/grid_selector"
         android:numColumns="auto_fit"
-        android:columnWidth="78dp"
+        android:columnWidth="100dp"
         android:stretchMode="spacingWidth"
         android:layout_weight="1.0"
         android:layout_height="0dip"
