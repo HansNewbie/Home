@@ -79,6 +79,31 @@
         <p class="notes">*The dates listed below will be the date of testing of APK - e.g. code is committed on 5 February but built and ran on device only on 15 February; the date listed will be 15 February instead of 5 February.</p>
         <hr>
 
+        <h4 class="date-entry">8 March 2014</h4>
+        <a href="files/2014-03-08/Home.apk"><div class="apk-download">Download APK here</div></a>
+        <div class="img-holder"><img src="images/2014-03-08-Portrait.png" width="200px"></div>
+        <div class="img-holder"><img src="images/2014-03-08-Landscape.png" width="400px"></div>
+        <p>
+          <strong>Changes:</strong>
+          <ul>
+            <li>Layout changes in XML files:
+              <ul>
+                <li>App listing is changed to top-to-bottom.</li>
+                <li>Horizontal spacing is increased.</li>
+                <li>Vertical spacing is increased.</li>
+              </ul>
+            </li>
+            <li>Added Apache license to source code.</li>
+          </ul>
+          <strong>Effects:</strong>
+          <ul>
+            <li>App listing of bottom-to-top was thought to be normal implementation but since it is unnatural and possible to change, now it becomes top-to-bottom, i.e. from A-to-Z. This also results in no unexpected gap at the top left of app list if the app numbers are not exact.</li>
+            <li>Vertical and horizontal spacing is increased. This could still be improved, though, since it was unclear which spacing definition would be better to be changed: of the container or per element. Also, app name is still cut even after increasing vertical spacing; this needs a bit more digging.</li>
+            <li>Added license due to some recent article about how not putting license explicitly means the repo is not open source.</li>
+          </ul>
+        </p>
+        <hr>
+
         <h4 class="date-entry">27 February 2014</h4>
         <a href="files/2014-02-27/Home.apk"><div class="apk-download">Download APK here</div></a>
         <div class="img-holder"><img src="images/2014-02-27.png" width="200px"></div>
