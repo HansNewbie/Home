@@ -427,6 +427,9 @@ public class Home extends Activity {
                 case KeyEvent.KEYCODE_BACK:
                     if (!event.isCanceled()) {
                         // Do BACK behavior.
+                    	if (mGrid.getVisibility() == View.VISIBLE) {
+                    		hideApplications();
+                    	}
                     }
                     mBackDown = true;
                     return true;
